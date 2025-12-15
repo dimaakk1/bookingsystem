@@ -7,7 +7,9 @@ import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 import org.example.booking.client.*;
+import org.example.booking.dto.BookingEvent;
 import org.example.booking.model.Booking;
+import org.example.booking.producer.BookingEventProducer;
 
 import java.util.List;
 
@@ -23,6 +25,9 @@ public class BookingResource {
     @Inject
     @RestClient
     EventClient eventClient;
+
+    @Inject
+    BookingEventProducer eventProducer;
 
 
     @POST
@@ -46,6 +51,17 @@ public class BookingResource {
         );
 
         booking.persist();
+
+        BookingEvent bookingEvent = new BookingEvent(
+                booking.id,
+                booking.userId,
+                booking.eventId,
+                booking.status
+        );
+
+        eventProducer.sendBookingEvent(bookingEvent);
+
+
 
         return Response.ok(booking).build();
     }

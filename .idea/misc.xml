@@ -7,7 +7,13 @@
         <option value="$PROJECT_DIR$/bookingsystem_event/pom.xml" />
         <option value="$PROJECT_DIR$/bookingsystem_users/pom.xml" />
         <option value="$PROJECT_DIR$/bookingsystem_booking/pom.xml" />
+        <option value="$PROJECT_DIR$/bookingsytem_api/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/bookingsytem_api/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="21" project-jdk-type="JavaSDK">

@@ -16,6 +16,9 @@ public class UserEntity {
     @Column(nullable = false, unique = true)
     public String email;
 
+    @Column(name = "totalbookings", nullable = false)
+    public int totalBookings = 0;
+
     public UserEntity() {}
 
     public UserEntity(String name, String email) {
