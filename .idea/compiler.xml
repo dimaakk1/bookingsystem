@@ -9,6 +9,7 @@
         <module name="bookingsystem_booking" />
         <module name="bookingsystem_event" />
         <module name="bookingsystem_users" />
+        <module name="bookingsystem_gateway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -19,6 +20,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="bookingsystem_booking" options="-parameters" />
       <module name="bookingsystem_event" options="-parameters" />
+      <module name="bookingsystem_gateway" options="-parameters" />
       <module name="bookingsystem_users" options="-parameters" />
       <module name="bookingsytem_api" options="-parameters" />
     </option>

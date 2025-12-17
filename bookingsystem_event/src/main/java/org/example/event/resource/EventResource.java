@@ -1,5 +1,6 @@
 package org.example.event.resource;
 
+import jakarta.annotation.security.RolesAllowed;
 import jakarta.transaction.Transactional;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
@@ -7,6 +8,7 @@ import org.example.event.model.Event;
 
 import java.util.List;
 
+@RolesAllowed("user")
 @Path("/events")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)

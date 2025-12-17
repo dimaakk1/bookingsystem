@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/bookingsystem_users/pom.xml" />
         <option value="$PROJECT_DIR$/bookingsystem_booking/pom.xml" />
         <option value="$PROJECT_DIR$/bookingsytem_api/pom.xml" />
+        <option value="$PROJECT_DIR$/bookingsystem_gateway/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

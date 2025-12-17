@@ -1,5 +1,6 @@
 package org.example.user.resource;
 
+import jakarta.annotation.security.RolesAllowed;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
@@ -9,6 +10,7 @@ import org.example.user.service.UserService;
 
 import java.util.List;
 
+@RolesAllowed("user")
 @Path("/users")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)

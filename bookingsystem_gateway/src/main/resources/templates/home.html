@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Booking Gateway</title>
+    <style>
+        body {
+            font-family: sans-serif; /* Використовує стандартний шрифт вашого ПК */
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        h1 { margin-bottom: 20px; color: #333; }
+
+        ul { list-style: none; padding: 0; }
+        li { margin: 10px 0; }
+
+        /* Прості кнопки */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+        }
+        .btn-login { background-color: #007bff; width: 80%; } /* Синя */
+        .btn-logout { background-color: #dc3545; font-size: 0.9rem; } /* Червона */
+
+        /* Посилання на сервіси */
+        .service-link {
+            display: block;
+            padding: 15px;
+            background: #e9ecef;
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .service-link:hover { background: #dfe4ea; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Booking System</h1>
+
+
+    <p>Привіт, <strong>{userName}</strong>!</p>
+
+    <h3>Доступні сервіси:</h3>
+    <ul>
+        <li><a href="{bookingServiceUrl}" class="service-link">📅 Booking Service</a></li>
+        <li><a href="{userServiceUrl}" class="service-link">👤 User Service</a></li>
+        <li><a href="{eventServiceUrl}" class="service-link">🎟️ Event Service</a></li>
+    </ul>
+
+    <br>
+    <a href="/logout" class="btn btn-logout">Вийти</a>
+
+
+
+</div>
+
+</body>
+</html>
